@@ -1,5 +1,14 @@
-# 💫 About Me:
-🔭 I’m currently working on web projects, bots & fun side projects<br>👯 I’m looking to collaborate on open-source and JavaScript projects<br>🤝 I’m looking for help with backend development & building bigger apps<br>🌱 I’m currently learning JavaScript, Node.js & Git<br>💬 Ask me about web development, coding or basketball<br>⚡ Fun fact: Im a med student that just happens to love tech. 
+# 💫 About Me
+
+I’m a medical student who just happens to be really into tech.
+
+I spend a lot of my time learning JavaScript, Node.js, Git, backend development, and basically figuring out how stuff works beyond just writing code that somehow runs 😭. I like building websites, bots, random side projects, and pretty much anything that lets me turn an idea in my head into something real.
+
+I’m still learning a lot, but that’s honestly part of what makes coding fun for me. There’s always some new thing to understand, break, fix, and then wonder why it took me three hours 💀.
+
+Outside of tech, I’m really into basketball, games, and just messing around with cool ideas.
+
+Medicine is the career. Tech is the obsession.
 
 
 ## 🌐 Socials:
