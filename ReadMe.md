@@ -31,6 +31,6 @@ Medicine is the career. Tech is the obsession.
 ![](https://github-contributor-stats.vercel.app/api?username=gojocodes-all&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
 ---
-[![](https://komarev.com/ghpvc/?username=gojocodes-all&icon=1&color=1)](https://visitcount.itsvg.in)
+[![](https://komarev.com/ghpvc/?username=gojocodes-all&icon=1&color=green)](https://visitcount.itsvg.in)
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
