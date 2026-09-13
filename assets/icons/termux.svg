@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img" aria-labelledby="title">
+  <title id="title">Termux</title>
+  <rect width="48" height="48" rx="11" fill="#161b22"/>
+  <rect x=".5" y=".5" width="47" height="47" rx="10.5" fill="none" stroke="#30363d"/>
+  <path d="m14 16 8 8-8 8M25 32h10" fill="none" stroke="#22ff88" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"/>
+</svg>

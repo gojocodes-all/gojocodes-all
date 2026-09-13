@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">GOJO.DEV — student developer</title>
+  <desc id="desc">A mobile profile banner for Owojuyigbe Oluwajomiloju, focused on websites, bots, experiments, and learning how technology works.</desc>
+
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#8b949e" stroke-opacity=".07"/>
+    </pattern>
+  </defs>
+
+  <rect width="720" height="420" fill="#0d1117"/>
+  <rect width="720" height="420" fill="url(#grid)"/>
+  <rect x=".5" y=".5" width="719" height="419" fill="none" stroke="#30363d"/>
+  <rect width="720" height="5" fill="#22ff88"/>
+
+  <text x="40" y="51" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" letter-spacing="1.5">PUBLIC PROFILE / SIGNAL</text>
+  <circle cx="674" cy="44" r="6" fill="#22ff88"/>
+
+  <text x="36" y="160" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="800" letter-spacing="-3.5">
+    GOJO<tspan fill="#22ff88">.DEV</tspan>
+  </text>
+  <text x="42" y="205" fill="#c9d1d9" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500">student developer</text>
+
+  <line x1="42" y1="240" x2="678" y2="240" stroke="#30363d"/>
+
+  <text x="42" y="283" fill="#22ff88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" letter-spacing="1.4">BUILD</text>
+  <text x="150" y="283" fill="#f0f6fc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17">WEB / BOTS / EXPERIMENTS</text>
+
+  <text x="42" y="328" fill="#22ff88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" letter-spacing="1.4">FOCUS</text>
+  <text x="150" y="328" fill="#f0f6fc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17">LEARN HOW IT WORKS</text>
+
+  <rect x="42" y="380" width="82" height="3" fill="#22ff88"/>
+  <rect x="124" y="380" width="554" height="3" fill="#21262d"/>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">GOJO.DEV — student developer</title>
+  <desc id="desc">A graphite profile banner for Owojuyigbe Oluwajomiloju, focused on websites, bots, experiments, and learning how technology works.</desc>
+
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#8b949e" stroke-opacity=".07"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="360" fill="#0d1117"/>
+  <rect width="1200" height="360" fill="url(#grid)"/>
+  <rect x=".5" y=".5" width="1199" height="359" fill="none" stroke="#30363d"/>
+  <rect x="0" y="0" width="1200" height="5" fill="#22ff88"/>
+
+  <text x="58" y="50" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" letter-spacing="1.8">GOJO.DEV / PUBLIC PROFILE</text>
+  <circle cx="1142" cy="43" r="6" fill="#22ff88"/>
+  <text x="1123" y="49" fill="#8b949e" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" letter-spacing="1.2">SIGNAL LIVE</text>
+
+  <text x="54" y="169" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="800" letter-spacing="-4">
+    GOJO<tspan fill="#22ff88">.DEV</tspan>
+  </text>
+  <text x="60" y="217" fill="#c9d1d9" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="500" letter-spacing=".2">student developer</text>
+  <line x1="60" y1="246" x2="734" y2="246" stroke="#30363d"/>
+  <text x="60" y="282" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" letter-spacing="1.1">WEB / BOTS / EXPERIMENTS / SYSTEMS</text>
+
+  <line x1="805" y1="90" x2="805" y2="303" stroke="#30363d"/>
+
+  <text x="850" y="106" fill="#22ff88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.6">IDENTITY</text>
+  <text x="850" y="134" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600">Owojuyigbe Oluwajomiloju</text>
+
+  <text x="850" y="181" fill="#22ff88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.6">DIRECTION</text>
+  <text x="850" y="209" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">MEDICINE + TECHNOLOGY</text>
+
+  <text x="850" y="256" fill="#22ff88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.6">STATUS</text>
+  <text x="850" y="284" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">LEARNING / BUILDING</text>
+
+  <rect x="60" y="326" width="90" height="3" fill="#22ff88"/>
+  <rect x="150" y="326" width="990" height="3" fill="#21262d"/>
+</svg>

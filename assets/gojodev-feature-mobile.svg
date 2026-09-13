@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="680" viewBox="0 0 720 680" role="img" aria-labelledby="title desc">
+  <title id="title">GOJO.DEV Night Signal portfolio</title>
+  <desc id="desc">Mobile featured project artwork for a content-driven Astro portfolio with case studies, accessibility testing, responsive media, and a project brief form.</desc>
+
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#8b949e" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+
+  <rect width="720" height="680" fill="#0b0f14"/>
+  <rect width="720" height="680" fill="url(#grid)"/>
+  <rect x=".5" y=".5" width="719" height="679" fill="none" stroke="#30363d"/>
+  <rect width="720" height="5" fill="#22ff88"/>
+
+  <text x="40" y="50" fill="#22ff88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" letter-spacing="1.5">SELECTED WORK / 01</text>
+
+  <text x="36" y="145" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="800" letter-spacing="-3">GOJO<tspan fill="#22ff88">.DEV</tspan></text>
+  <text x="42" y="188" fill="#c9d1d9" font-family="Arial, Helvetica, sans-serif" font-size="22">Personal portfolio · Night Signal</text>
+
+  <text x="42" y="243" fill="#8b949e" font-family="Arial, Helvetica, sans-serif" font-size="18">
+    <tspan x="42" dy="0">A content-led home for real work,</tspan>
+    <tspan x="42" dy="29">the decisions behind it, and what I am learning.</tspan>
+  </text>
+
+  <line x1="42" y1="308" x2="678" y2="308" stroke="#30363d"/>
+  <text x="42" y="350" fill="#22ff88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">01</text>
+  <text x="91" y="350" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="600">Structured project case studies</text>
+
+  <line x1="42" y1="378" x2="678" y2="378" stroke="#30363d"/>
+  <text x="42" y="420" fill="#22ff88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">02</text>
+  <text x="91" y="420" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="600">Responsive AVIF + WebP media</text>
+
+  <line x1="42" y1="448" x2="678" y2="448" stroke="#30363d"/>
+  <text x="42" y="490" fill="#22ff88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">03</text>
+  <text x="91" y="490" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="600">Playwright + Axe checks</text>
+
+  <line x1="42" y1="518" x2="678" y2="518" stroke="#30363d"/>
+  <text x="42" y="560" fill="#22ff88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">04</text>
+  <text x="91" y="560" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="600">Supabase project brief</text>
+
+  <rect x="42" y="602" width="276" height="46" fill="none" stroke="#22ff88"/>
+  <text x="180" y="631" fill="#22ff88" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700">EXPLORE LIVE SITE →</text>
+  <text x="678" y="631" fill="#8b949e" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">ASTRO / TYPESCRIPT</text>
+</svg>

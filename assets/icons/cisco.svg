@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img" aria-labelledby="title">
+  <title id="title">Cisco</title>
+  <rect width="48" height="48" rx="11" fill="#161b22"/>
+  <rect x=".5" y=".5" width="47" height="47" rx="10.5" fill="none" stroke="#30363d"/>
+  <g fill="#22ff88">
+    <rect x="11" y="19" width="2.5" height="10" rx="1.25"/>
+    <rect x="16" y="16" width="2.5" height="16" rx="1.25"/>
+    <rect x="21" y="13" width="2.5" height="22" rx="1.25"/>
+    <rect x="26" y="13" width="2.5" height="22" rx="1.25"/>
+    <rect x="31" y="16" width="2.5" height="16" rx="1.25"/>
+    <rect x="36" y="19" width="2.5" height="10" rx="1.25"/>
+  </g>
+</svg>

@@ -1,12 +1,16 @@
-name: Generate contribution snake
+name: Generate profile graphics
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "17 0 * * *"
   workflow_dispatch:
   push:
     branches:
       - main
+
+concurrency:
+  group: profile-graphics
+  cancel-in-progress: true
 
 jobs:
   generate:
@@ -16,13 +20,22 @@ jobs:
     timeout-minutes: 5
 
     steps:
+      - name: Check out profile source
+        uses: actions/checkout@v4
+
+      - name: Generate GitHub activity cards
+        run: node scripts/generate-profile-cards.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+
       - name: Generate contribution snake
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg?color_snake=%2322ff88&color_dots=%23161b22,%230d4429,%23006933,%2326a641,%2339d353
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%2322ff88
+            dist/contribution-snake-light.svg?color_snake=%2322ff88&color_dots=%23ebedf0,%23acf2c6,%235bdb88,%2322b65c,%23117a3d
+            dist/contribution-snake-dark.svg?color_snake=%2322ff88&color_dots=%23161b22,%230d4429,%23006d32,%2326a641,%2339d353
 
       - name: Publish to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
