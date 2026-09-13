@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+  <title id="title">GOJO.DEV portfolio project</title>
+  <desc id="desc">Dark portfolio artwork with neon green typography and a minimal developer interface.</desc>
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#111820"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#22ff88" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="500" fill="url(#fade)"/>
+  <rect width="1200" height="500" fill="url(#grid)"/>
+
+  <rect x="46" y="44" width="1108" height="412" rx="10" fill="#0b0f14" stroke="#26313d"/>
+  <line x1="46" y1="104" x2="1154" y2="104" stroke="#26313d"/>
+
+  <circle cx="78" cy="74" r="5" fill="#22ff88"/>
+  <circle cx="98" cy="74" r="5" fill="#33404d"/>
+  <circle cx="118" cy="74" r="5" fill="#33404d"/>
+
+  <text x="154" y="81" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">gojodev.name.ng</text>
+  <text x="1088" y="81" fill="#22ff88" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">PORTFOLIO / 2026</text>
+
+  <text x="94" y="175" fill="#22ff88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">01 / HELLO</text>
+  <text x="94" y="250" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" letter-spacing="-2">GOJO.DEV</text>
+  <text x="98" y="294" fill="#a7b0ba" font-family="Arial, Helvetica, sans-serif" font-size="25">student developer · web · bots · experiments</text>
+
+  <line x1="96" y1="342" x2="500" y2="342" stroke="#22ff88" stroke-width="2"/>
+  <text x="96" y="382" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">building useful things, then learning why they work.</text>
+
+  <text x="790" y="178" fill="#6e7681" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">CURRENT FOCUS</text>
+  <text x="790" y="219" fill="#f0f6fc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">JavaScript / Node.js</text>
+  <text x="790" y="253" fill="#f0f6fc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">web interfaces</text>
+  <text x="790" y="287" fill="#f0f6fc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">automation + bots</text>
+
+  <rect x="790" y="335" width="264" height="42" fill="none" stroke="#22ff88"/>
+  <text x="922" y="362" fill="#22ff88" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">VISIT GOJO.DEV →</text>
+
+  <text x="1090" y="423" fill="#33404d" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">gojocodes-all</text>
+</svg>
