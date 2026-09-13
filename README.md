@@ -11,15 +11,15 @@
 </p>
 
 <p align="center">
-  <a href="#01--profile">PROFILE</a>
+  <a href="#user-content-01--profile">PROFILE</a>
   &nbsp;·&nbsp;
-  <a href="#02--stack">STACK</a>
+  <a href="#user-content-02--stack">STACK</a>
   &nbsp;·&nbsp;
-  <a href="#03--selected-work">WORK</a>
+  <a href="#user-content-03--selected-work">WORK</a>
   &nbsp;·&nbsp;
-  <a href="#04--github-activity">ACTIVITY</a>
+  <a href="#user-content-04--github-activity">ACTIVITY</a>
   &nbsp;·&nbsp;
-  <a href="#05--connect">CONNECT</a>
+  <a href="#user-content-05--connect">CONNECT</a>
 </p>
 
 ---
