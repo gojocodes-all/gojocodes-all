@@ -1,36 +1,205 @@
-# 💫 About Me
+<p align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&height=220&color=22FF88&text=GOJO.DEV&fontColor=0D1117&fontSize=72&fontAlignY=38&desc=student%20developer&descAlignY=58&descSize=18"
+    width="100%"
+    alt="GOJO.DEV — student developer"
+  />
+</p>
 
-I’m a medical student who just happens to be really into tech.
-
-I spend a lot of my time learning JavaScript, Node.js, Git, backend development, and basically figuring out how stuff works beyond just writing code that somehow runs 😭. I like building websites, bots, random side projects, and pretty much anything that lets me turn an idea in my head into something real.
-
-I’m still learning a lot, but that’s honestly part of what makes coding fun for me. There’s always some new thing to understand, break, fix, and then wonder why it took me three hours 💀.
-
-Outside of tech, I’m really into basketball, games, and just messing around with cool ideas.
-
-Medicine is the career. Tech is the obsession.
-
-
-## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/gojo.the.dev) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/jomiloju-owojuyigbe-523b66414) [![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/33112582) [![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?logo=TikTok&logoColor=white)](https://tiktok.com/@gojo.the.dev) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/gojo.the.dev) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:gojo@gojodev.name.ng) 
-
-# 💻 Tech Stack:
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white) ![Astro](https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Adobe](https://img.shields.io/badge/adobe-%23FF0000.svg?style=for-the-badge&logo=adobe&logoColor=white) ![Blender](https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white) ![Cisco](https://img.shields.io/badge/cisco-%23049fd9.svg?style=for-the-badge&logo=cisco&logoColor=black) ![Raspberry Pi](https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.shion.dev/api?username=gojocodes-all&theme=github_dark_dimmed&hide_border=true&include_all_commits=false&count_private=false)<br/>
-![](https://streak-stats.demolab.com/?user=gojocodes-all&theme=github_dark_dimmed&hide_border=true)<br/>
-![](https://github-readme-stats.shion.dev/api/top-langs/?username=gojocodes-all&theme=github_dark_dimmed&hide_border=true&include_all_commits=false&count_private=false&layout=compact)
-
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=gojocodes-all&theme=radical&no-frame=false&no-bg=true&margin-w=4)
-
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
-
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=gojocodes-all&limit=5&theme=dark&combine_all_yearly_contributions=true)
+<p align="center">
+  <a href="https://www.gojodev.name.ng/"><img src="https://img.shields.io/badge/website-22FF88?style=flat-square&logo=googlechrome&logoColor=0D1117" alt="Website"></a>
+  <a href="https://github.com/gojocodes-all"><img src="https://img.shields.io/badge/@gojocodes--all-161B22?style=flat-square&logo=github&logoColor=22FF88" alt="GitHub"></a>
+</p>
 
 ---
-[![](https://komarev.com/ghpvc/?username=gojocodes-all&icon=1&color=green)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+<p align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&height=110&color=22FF88&text=about&fontColor=0D1117&fontSize=42&fontAlign=8&fontAlignY=30"
+    width="100%"
+    alt="About"
+  />
+</p>
+
+<p align="center">
+  Student developer building web projects, bots, and whatever else makes me curious enough to open a terminal.
+  <br><br>
+  I care about understanding what is happening under the hood, not just getting something to run.
+  <br>
+  Medicine is the career path. Tech is the obsession.
+</p>
+
+---
+
+<p align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&height=110&color=22FF88&text=stack&fontColor=0D1117&fontSize=42&fontAlign=7&fontAlignY=30"
+    width="100%"
+    alt="Stack"
+  />
+</p>
+
+<p align="center"><sub><b>COMFORTABLE WITH</b></sub></p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,ts,nodejs,git,bash,arduino&theme=dark" alt="HTML, CSS, JavaScript, TypeScript, Node.js, Git, Bash and Arduino">
+  &nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/espressif/22FF88" height="44" alt="ESP32" title="ESP32">
+</p>
+
+<p align="center"><sub><b>CURRENTLY LEARNING</b></sub></p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=cpp,vite,mongodb,blender,react,supabase&theme=dark" alt="C++, Vite, MongoDB, Blender, React and Supabase">
+</p>
+
+<p align="center"><sub><b>FAMILIAR WITH</b></sub></p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=sass,figma,raspberrypi,astro&theme=dark" alt="Sass, Figma, Raspberry Pi and Astro">
+  &nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/latex/22FF88" height="42" alt="LaTeX" title="LaTeX">
+  &nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/cisco/22FF88" height="42" alt="Cisco" title="Cisco">
+</p>
+
+<p align="center"><sub><b>TOOLBOX</b></sub></p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=github,vscode,vercel,supabase,npm&theme=dark" alt="GitHub, VS Code, Vercel, Supabase and npm">
+  &nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/acode/22FF88" height="42" alt="Acode" title="Acode">
+  &nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/termux/22FF88" height="42" alt="Termux" title="Termux">
+  &nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/render/22FF88" height="42" alt="Render" title="Render">
+</p>
+
+---
+
+<p align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&height=110&color=22FF88&text=featured%20work&fontColor=0D1117&fontSize=42&fontAlign=18&fontAlignY=30"
+    width="100%"
+    alt="Featured work"
+  />
+</p>
+
+<p align="center">
+  <a href="https://www.gojodev.name.ng/">
+    <img src="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/main/assets/gojodev-feature.svg" width="100%" alt="GOJO.DEV portfolio artwork">
+  </a>
+</p>
+
+<h3 align="center">GOJO.DEV</h3>
+
+<p align="center">
+  My personal portfolio and home for the work I build, refine, and learn from.
+</p>
+
+<p align="center">
+  <a href="https://www.gojodev.name.ng/"><img src="https://img.shields.io/badge/visit%20site-22FF88?style=for-the-badge&logo=googlechrome&logoColor=0D1117" alt="Visit GOJO.DEV"></a>
+  <img src="https://img.shields.io/badge/Astro-161B22?style=for-the-badge&logo=astro&logoColor=22FF88" alt="Astro">
+  <img src="https://img.shields.io/badge/TypeScript-161B22?style=for-the-badge&logo=typescript&logoColor=22FF88" alt="TypeScript">
+</p>
+
+<br>
+
+<table align="center">
+  <tr>
+    <td width="50%" valign="top">
+      <h3>⟨∞⟩ Infinity MD</h3>
+      <p>Telegram-first bot project built with Node.js and grammY, with WhatsApp and Discord planned.</p>
+      <sub>JavaScript · Node.js · grammY</sub>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Providence Heights</h3>
+      <p>A school website project focused on clear information, structure, and responsive presentation.</p>
+      <p>
+        <a href="https://providence-heights.vercel.app">Live site</a>
+        ·
+        <a href="https://github.com/gojocodes-all/Providence-heights">Source</a>
+      </p>
+    </td>
+  </tr>
+</table>
+
+---
+
+<p align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&height=110&color=22FF88&text=connect&fontColor=0D1117&fontSize=42&fontAlign=10&fontAlignY=30"
+    width="100%"
+    alt="Connect"
+  />
+</p>
+
+<p align="center">
+  <a href="https://www.gojodev.name.ng/"><img src="https://img.shields.io/badge/Website-22FF88?style=for-the-badge&logo=googlechrome&logoColor=0D1117" alt="Website"></a>
+  <a href="https://instagram.com/gojo.the.dev"><img src="https://img.shields.io/badge/Instagram-22FF88?style=for-the-badge&logo=instagram&logoColor=0D1117" alt="Instagram"></a>
+  <a href="https://www.linkedin.com/in/jomiloju-owojuyigbe-523b66414"><img src="https://img.shields.io/badge/LinkedIn-22FF88?style=for-the-badge&logo=linkedin&logoColor=0D1117" alt="LinkedIn"></a>
+  <a href="mailto:gojo@gojodev.name.ng"><img src="https://img.shields.io/badge/Email-22FF88?style=for-the-badge&logo=gmail&logoColor=0D1117" alt="Email"></a>
+</p>
+
+---
+
+<p align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&height=110&color=22FF88&text=stats&fontColor=0D1117&fontSize=42&fontAlign=7&fontAlignY=30"
+    width="100%"
+    alt="GitHub stats"
+  />
+</p>
+
+<p align="center">
+  <img
+    src="https://github-stats-extended.vercel.app/api?username=gojocodes-all&rank_icon=github&hide_title=true&show_icons=true&include_all_commits=true&hide_border=true&bg_color=00000000&title_color=22FF88&icon_color=22FF88&text_color=C9D1D9"
+    height="170"
+    alt="GOJO.DEV GitHub stats"
+  />
+  <img
+    src="https://streak-stats.demolab.com?user=gojocodes-all&hide_border=true&background=00000000&ring=22FF88&fire=22FF88&currStreakLabel=22FF88&currStreakNum=FFFFFF&sideNums=FFFFFF&sideLabels=8B949E&dates=8B949E"
+    height="170"
+    alt="GOJO.DEV GitHub streak"
+  />
+</p>
+
+<p align="center">
+  <img
+    src="https://github-readme-activity-graph.vercel.app/graph?username=gojocodes-all&bg_color=00000000&color=8B949E&line=22FF88&point=FFFFFF&area=true&area_color=22FF88&hide_border=true"
+    width="100%"
+    alt="GOJO.DEV GitHub activity graph"
+  />
+</p>
+
+---
+
+<p align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&height=110&color=22FF88&text=contributions%20snake&fontColor=0D1117&fontSize=42&fontAlign=26&fontAlignY=30"
+    width="100%"
+    alt="Contribution snake"
+  />
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/github-contribution-grid-snake.svg">
+    <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/github-contribution-grid-snake.svg" width="100%">
+  </picture>
+</p>
+
+---
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=gojocodes-all&style=flat-square&color=22FF88&label=PROFILE+VIEWS" alt="Profile views">
+</p>
+
+<p align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&height=140&color=22FF88&section=footer"
+    width="100%"
+    alt=""
+  />
+</p>
