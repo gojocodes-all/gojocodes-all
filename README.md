@@ -11,20 +11,18 @@
 </p>
 
 <p align="center">
-  <a href="#profile">PROFILE</a>
+  <a href="#01--profile">PROFILE</a>
   &nbsp;·&nbsp;
-  <a href="#stack">STACK</a>
+  <a href="#02--stack">STACK</a>
   &nbsp;·&nbsp;
-  <a href="#work">WORK</a>
+  <a href="#03--selected-work">WORK</a>
   &nbsp;·&nbsp;
-  <a href="#activity">ACTIVITY</a>
+  <a href="#04--github-activity">ACTIVITY</a>
   &nbsp;·&nbsp;
-  <a href="#connect">CONNECT</a>
+  <a href="#05--connect">CONNECT</a>
 </p>
 
 ---
-
-<a id="profile"></a>
 
 ## `01` / Profile
 
@@ -37,8 +35,6 @@ I keep pulling at the layers underneath: what the runtime is doing, how the piec
 <samp>NOW / JAVASCRIPT DEPTH · NODE.JS · C++ FOUNDATIONS · BOT ARCHITECTURE</samp>
 
 ---
-
-<a id="stack"></a>
 
 ## `02` / Stack
 
@@ -94,8 +90,6 @@ The labels matter here: this is a record of what I can use comfortably, what I'm
 
 ---
 
-<a id="work"></a>
-
 ## `03` / Selected work
 
 <p align="center">
@@ -139,8 +133,6 @@ A responsive single-page school website that organizes academics, facilities, st
 
 ---
 
-<a id="activity"></a>
-
 ## `04` / GitHub activity
 
 <p align="center">
@@ -170,8 +162,6 @@ A responsive single-page school website that organizes academics, facilities, st
 </p>
 
 ---
-
-<a id="connect"></a>
 
 ## `05` / Connect
 
