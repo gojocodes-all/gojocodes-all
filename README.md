@@ -30,7 +30,7 @@ I'm **Owojuyigbe Oluwajomiloju** — a student developer who likes understanding
 
 I keep pulling at the layers underneath: what the runtime is doing, how the pieces connect, and why a solution behaves the way it does.
 
-> Medicine is the career. Tech is the obsession.
+> Programming for fun.
 
 <samp>NOW / JAVASCRIPT DEPTH · NODE.JS · C++ FOUNDATIONS · BOT ARCHITECTURE</samp>
 
