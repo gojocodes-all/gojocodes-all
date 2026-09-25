@@ -23,6 +23,9 @@ jobs:
       - name: Check out profile source
         uses: actions/checkout@v4
 
+      - name: Test profile card generator
+        run: node --test test/generate-profile-cards.test.mjs
+
       - name: Generate GitHub activity cards
         run: node scripts/generate-profile-cards.mjs
         env:
