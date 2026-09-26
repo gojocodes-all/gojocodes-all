@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title desc">
+  <title id="title">gojocodes-all GitHub statistics and contribution streak</title>
+  <desc id="desc">Daily profile snapshot with 402 contributions in the visible year and a current streak of 14 days.</desc>
+  <rect width="1200" height="280" rx="10" fill="#0d1117"/>
+  <rect x=".5" y=".5" width="1199" height="279" rx="9.5" fill="none" stroke="#30363d"/>
+  <rect width="1200" height="4" fill="#22ff88"/>
+  
+      <text x="42" y="42" fill="#22ff88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" letter-spacing="1.5">GITHUB / DAILY SNAPSHOT</text>
+      <text x="1158" y="42" fill="#8b949e" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">@gojocodes-all</text>
+      <line x1="42" y1="63" x2="1158" y2="63" stroke="#30363d"/>
+
+      
+    <text x="42" y="132" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">402</text>
+    <text x="42" y="159" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.1">CONTRIBUTIONS / 365D</text>
+      
+    <text x="232" y="132" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">20</text>
+    <text x="232" y="159" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.1">PUBLIC REPOS</text>
+      
+    <text x="365" y="132" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">5</text>
+    <text x="365" y="159" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.1">STARS EARNED</text>
+      
+    <text x="535" y="132" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">37</text>
+    <text x="535" y="159" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.1">PULL REQUESTS</text>
+
+      <line x1="704" y1="86" x2="704" y2="223" stroke="#30363d"/>
+      <text x="752" y="102" fill="#22ff88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" letter-spacing="1.4">CONTRIBUTION STREAK</text>
+      
+    <text x="752" y="174" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700">14</text>
+    <text x="752" y="201" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.1">CURRENT</text>
+      
+    <text x="930" y="164" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="700">14</text>
+    <text x="930" y="191" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.1">BEST / 365D</text>
+      
+    <text x="1060" y="164" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="700">42</text>
+    <text x="1060" y="191" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.1">ACTIVE DAYS</text>
+
+      <text x="42" y="250" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">PUBLIC PROFILE DATA · REFRESHED DAILY · THROUGH 2026-09-26</text>
+</svg>

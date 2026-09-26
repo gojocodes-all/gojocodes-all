@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="430" viewBox="0 0 720 430" role="img" aria-labelledby="title desc">
+  <title id="title">gojocodes-all weekly contribution activity</title>
+  <desc id="desc">398 contributions across the 16 weeks shown in this graph.</desc>
+  <rect width="720" height="430" rx="10" fill="#0d1117"/>
+  <rect x=".5" y=".5" width="719" height="429" rx="9.5" fill="none" stroke="#30363d"/>
+  <rect width="720" height="4" fill="#22ff88"/>
+  
+      <text x="38" y="43" fill="#22ff88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" letter-spacing="1.5">CONTRIBUTION ACTIVITY / 16 WEEKS</text>
+      <text x="682" y="43" fill="#8b949e" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">398 IN VIEW</text>
+      <line x1="38" y1="64" x2="682" y2="64" stroke="#30363d"/>
+      <line x1="54" y1="98.0" x2="680" y2="98.0" stroke="#30363d" stroke-opacity=".75"/>
+      <text x="42" y="102.0" fill="#8b949e" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">130</text>
+<line x1="54" y1="179.3" x2="680" y2="179.3" stroke="#30363d" stroke-opacity=".75"/>
+      <text x="42" y="183.3" fill="#8b949e" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">87</text>
+<line x1="54" y1="260.7" x2="680" y2="260.7" stroke="#30363d" stroke-opacity=".75"/>
+      <text x="42" y="264.7" fill="#8b949e" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">43</text>
+<line x1="54" y1="342.0" x2="680" y2="342.0" stroke="#30363d" stroke-opacity=".75"/>
+      <text x="42" y="346.0" fill="#8b949e" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">0</text>
+      <path d="M54.0 336.4 L95.7 340.1 L137.5 336.4 L179.2 340.1 L220.9 342.0 L262.7 342.0 L304.4 321.4 L346.1 342.0 L387.9 98.0 L429.6 265.0 L471.3 328.9 L513.1 325.1 L554.8 313.8 L596.5 214.4 L638.3 240.6 L680.0 238.8 L680 342 L54 342 Z" fill="#22ff88" fill-opacity=".08"/>
+      <path d="M54.0 336.4 L95.7 340.1 L137.5 336.4 L179.2 340.1 L220.9 342.0 L262.7 342.0 L304.4 321.4 L346.1 342.0 L387.9 98.0 L429.6 265.0 L471.3 328.9 L513.1 325.1 L554.8 313.8 L596.5 214.4 L638.3 240.6 L680.0 238.8" fill="none" stroke="#22ff88" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"/>
+      <circle cx="54.0" cy="336.4" r="3.5" fill="#0d1117" stroke="#22ff88" stroke-width="2"/><circle cx="95.7" cy="340.1" r="3.5" fill="#0d1117" stroke="#22ff88" stroke-width="2"/><circle cx="137.5" cy="336.4" r="3.5" fill="#0d1117" stroke="#22ff88" stroke-width="2"/><circle cx="179.2" cy="340.1" r="3.5" fill="#0d1117" stroke="#22ff88" stroke-width="2"/><circle cx="220.9" cy="342.0" r="3.5" fill="#0d1117" stroke="#22ff88" stroke-width="2"/><circle cx="262.7" cy="342.0" r="3.5" fill="#0d1117" stroke="#22ff88" stroke-width="2"/><circle cx="304.4" cy="321.4" r="3.5" fill="#0d1117" stroke="#22ff88" stroke-width="2"/><circle cx="346.1" cy="342.0" r="3.5" fill="#0d1117" stroke="#22ff88" stroke-width="2"/><circle cx="387.9" cy="98.0" r="3.5" fill="#0d1117" stroke="#22ff88" stroke-width="2"/><circle cx="429.6" cy="265.0" r="3.5" fill="#0d1117" stroke="#22ff88" stroke-width="2"/><circle cx="471.3" cy="328.9" r="3.5" fill="#0d1117" stroke="#22ff88" stroke-width="2"/><circle cx="513.1" cy="325.1" r="3.5" fill="#0d1117" stroke="#22ff88" stroke-width="2"/><circle cx="554.8" cy="313.8" r="3.5" fill="#0d1117" stroke="#22ff88" stroke-width="2"/><circle cx="596.5" cy="214.4" r="3.5" fill="#0d1117" stroke="#22ff88" stroke-width="2"/><circle cx="638.3" cy="240.6" r="3.5" fill="#0d1117" stroke="#22ff88" stroke-width="2"/><circle cx="680.0" cy="238.8" r="3.5" fill="#0d1117" stroke="#22ff88" stroke-width="2"/>
+      
+    <text x="54.0" y="370" fill="#8b949e" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">7 Jun</text>
+    <text x="262.7" y="370" fill="#8b949e" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">12 Jul</text>
+    <text x="471.3" y="370" fill="#8b949e" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">16 Aug</text>
+    <text x="680.0" y="370" fill="#8b949e" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">20 Sept</text>
+      <text x="54" y="410" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">WEEKLY PUBLIC CONTRIBUTIONS</text>
+</svg>
