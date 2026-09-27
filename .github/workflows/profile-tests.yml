@@ -1,0 +1,23 @@
+name: Test profile graphics
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-graphics-test-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out profile source
+        uses: actions/checkout@v4
+
+      - name: Test profile card generator
+        run: node --test test/generate-profile-cards.test.mjs
