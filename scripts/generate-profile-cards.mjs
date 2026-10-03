@@ -27,6 +27,9 @@ const PROFILE_QUERY = `
         totalCount
       }
       contributionsCollection {
+        joinedGitHubContribution {
+          occurredAt
+        }
         restrictedContributionsCount
         totalCommitContributions
         totalIssueContributions
@@ -124,6 +127,7 @@ function normalizeProfile(user) {
     commitContributions: contributions.totalCommitContributions ?? 0,
     currentStreak: streaks.current,
     issueContributions: contributions.totalIssueContributions ?? 0,
+    joinedContributions: contributions.joinedGitHubContribution ? 1 : 0,
     longestStreak: streaks.longest,
     profileDate: days.at(-1)?.date ?? new Date().toISOString().slice(0, 10),
     publicRepos: publicRepositories.length,
@@ -160,7 +164,10 @@ function renderOverview(profile, mobile = false) {
   const privateMix = profile.restrictedContributions > 0
     ? ` · ${formatNumber(profile.restrictedContributions)} PRIVATE`
     : '';
-  const mix = `${formatCount(profile.commitContributions, 'COMMIT')} · ${formatCount(profile.pullRequestContributions, 'PR')} · ${formatCount(profile.issueContributions, 'ISSUE')} · ${formatCount(profile.reviewContributions, 'REVIEW')} · ${formatCount(profile.repositoryContributions, 'REPO')}${privateMix}`;
+  const joinedMix = profile.joinedContributions > 0
+    ? ` · ${formatCount(profile.joinedContributions, 'JOIN')}`
+    : '';
+  const mix = `${formatCount(profile.commitContributions, 'COMMIT')} · ${formatCount(profile.pullRequestContributions, 'PR')} · ${formatCount(profile.issueContributions, 'ISSUE')} · ${formatCount(profile.reviewContributions, 'REVIEW')} · ${formatCount(profile.repositoryContributions, 'REPO')}${privateMix}${joinedMix}`;
 
   if (mobile) {
     return svgShell({
@@ -185,7 +192,7 @@ function renderOverview(profile, mobile = false) {
         ${metric({ label: 'ACTIVE DAYS', value: profile.activeDays, x: 510, y: 399, valueSize: 42 })}
 
         <line x1="40" y1="468" x2="680" y2="468" stroke="${BORDER}"/>
-        <text x="40" y="502" fill="${TEXT}" font-family="${MONO}" font-size="12">MIX / 365D · ${escapeXml(mix)}</text>
+        <text x="40" y="502" fill="${TEXT}" font-family="${MONO}" font-size="11">MIX / 365D · ${escapeXml(mix)}</text>
         <text x="40" y="535" fill="${MUTED}" font-family="${MONO}" font-size="12">30-MIN REFRESH SCHEDULE · DATA THROUGH ${updated}</text>`,
     });
   }
