@@ -138,18 +138,33 @@ A responsive single-page school website that organizes academics, facilities, st
 <p align="center">
   <picture>
     <source media="(max-width: 640px)" srcset="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/profile-overview-mobile.svg">
-    <img src="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/profile-overview.svg" width="100%" alt="GitHub statistics and contribution streak for gojocodes-all, refreshed daily">
+    <img src="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/profile-overview.svg" width="100%" alt="GitHub statistics, contribution mix, and contribution streak for gojocodes-all">
   </picture>
 </p>
+
+### Daily pulse
+
+The close-up view: individual contribution days across the last month.
 
 <p align="center">
   <picture>
-    <source media="(max-width: 640px)" srcset="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/profile-activity-mobile.svg">
-    <img src="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/profile-activity.svg" width="100%" alt="Weekly public contribution activity graph for gojocodes-all">
+    <source media="(max-width: 640px)" srcset="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/profile-daily-mobile.svg">
+    <img src="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/profile-daily.svg" width="100%" alt="Daily public contribution activity across the last 30 days for gojocodes-all">
   </picture>
 </p>
 
-<p align="center"><sub>Generated daily from public GitHub data by this profile repository's workflow.</sub></p>
+### Weekly rhythm
+
+The wider view: week-by-week momentum across roughly seven months.
+
+<p align="center">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/profile-weekly-mobile.svg">
+    <img src="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/profile-weekly.svg" width="100%" alt="Weekly public contribution activity across the last 30 weeks for gojocodes-all">
+  </picture>
+</p>
+
+<p align="center"><sub>Regenerated every 30 minutes from GitHub data by this profile repository's workflow.</sub></p>
 
 ### Contribution trail
 
