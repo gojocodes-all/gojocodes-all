@@ -4,8 +4,9 @@ import test from 'node:test';
 import {
   calculateStreaks,
   normalizeProfile,
-  renderActivity,
+  renderDailyActivity,
   renderOverview,
+  renderWeeklyActivity,
 } from '../scripts/generate-profile-cards.mjs';
 
 function dateFromToday(offset) {
@@ -28,11 +29,15 @@ function profileFixture(overrides = {}) {
         },
       ],
     },
+    commitContributions: 7,
     currentStreak: 1,
+    issueContributions: 1,
     longestStreak: 2,
     profileDate: '2026-09-14',
     publicRepos: 3,
     pullRequests: 4,
+    pullRequestContributions: 2,
+    reviewContributions: 3,
     stars: 5,
     totalContributions: 6,
     username: 'gojocodes-all',
@@ -78,6 +83,10 @@ test('normalizeProfile excludes private repositories from public totals', () => 
     },
     pullRequests: { totalCount: 7 },
     contributionsCollection: {
+      totalCommitContributions: 8,
+      totalIssueContributions: 1,
+      totalPullRequestContributions: 3,
+      totalPullRequestReviewContributions: 2,
       contributionCalendar: {
         totalContributions: 9,
         weeks: [
@@ -99,6 +108,10 @@ test('normalizeProfile excludes private repositories from public totals', () => 
   assert.equal(profile.stars, 5);
   assert.equal(profile.pullRequests, 7);
   assert.equal(profile.totalContributions, 9);
+  assert.equal(profile.commitContributions, 8);
+  assert.equal(profile.issueContributions, 1);
+  assert.equal(profile.pullRequestContributions, 3);
+  assert.equal(profile.reviewContributions, 2);
 });
 
 test('renderOverview escapes user-controlled text and includes accessible metadata', () => {
@@ -113,14 +126,24 @@ test('renderOverview escapes user-controlled text and includes accessible metada
 test('renderOverview supports the mobile card dimensions', () => {
   const svg = renderOverview(profileFixture(), true);
 
-  assert.match(svg, /width="720" height="520"/);
+  assert.match(svg, /width="720" height="560"/);
   assert.match(svg, /PUBLIC REPOSITORIES/);
+  assert.match(svg, /MIX \/ 365D/);
 });
 
-test('renderActivity describes the rendered weekly data', () => {
-  const svg = renderActivity(profileFixture());
+test('renderDailyActivity describes the rendered daily data', () => {
+  const svg = renderDailyActivity(profileFixture());
+
+  assert.match(svg, /daily contribution activity/);
+  assert.match(svg, /2 contributions across the 2 days shown/);
+  assert.match(svg, /DAILY PULSE \/ 2 DAYS/);
+});
+
+test('renderWeeklyActivity describes the rendered weekly data', () => {
+  const svg = renderWeeklyActivity(profileFixture());
 
   assert.match(svg, /weekly contribution activity/);
   assert.match(svg, /2 contributions across the 1 weeks shown/);
+  assert.match(svg, /WEEKLY RHYTHM \/ 1 WEEKS/);
   assert.match(svg, /WEEKLY PUBLIC CONTRIBUTIONS/);
 });
