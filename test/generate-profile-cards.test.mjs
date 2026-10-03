@@ -38,6 +38,7 @@ function profileFixture(overrides = {}) {
     pullRequests: 4,
     pullRequestContributions: 2,
     restrictedContributions: 4,
+    repositoryContributions: 1,
     reviewContributions: 3,
     stars: 5,
     totalContributions: 6,
@@ -89,6 +90,7 @@ test('normalizeProfile excludes private repositories from public totals', () => 
       totalIssueContributions: 1,
       totalPullRequestContributions: 3,
       totalPullRequestReviewContributions: 2,
+      totalRepositoryContributions: 1,
       contributionCalendar: {
         totalContributions: 9,
         weeks: [
@@ -114,6 +116,7 @@ test('normalizeProfile excludes private repositories from public totals', () => 
   assert.equal(profile.issueContributions, 1);
   assert.equal(profile.pullRequestContributions, 3);
   assert.equal(profile.restrictedContributions, 6);
+  assert.equal(profile.repositoryContributions, 1);
   assert.equal(profile.reviewContributions, 2);
 });
 
@@ -132,6 +135,7 @@ test('renderOverview supports the mobile card dimensions', () => {
   assert.match(svg, /width="720" height="560"/);
   assert.match(svg, /PUBLIC REPOSITORIES/);
   assert.match(svg, /MIX \/ 365D/);
+  assert.match(svg, /1 REPO/);
   assert.match(svg, /4 PRIVATE/);
 });
 
