@@ -32,6 +32,7 @@ function profileFixture(overrides = {}) {
     commitContributions: 7,
     currentStreak: 1,
     issueContributions: 1,
+    joinedContributions: 1,
     longestStreak: 2,
     profileDate: '2026-09-14',
     publicRepos: 3,
@@ -85,6 +86,7 @@ test('normalizeProfile excludes private repositories from public totals', () => 
     },
     pullRequests: { totalCount: 7 },
     contributionsCollection: {
+      joinedGitHubContribution: { occurredAt: '2026-01-01T00:00:00Z' },
       restrictedContributionsCount: 6,
       totalCommitContributions: 8,
       totalIssueContributions: 1,
@@ -114,6 +116,7 @@ test('normalizeProfile excludes private repositories from public totals', () => 
   assert.equal(profile.totalContributions, 9);
   assert.equal(profile.commitContributions, 8);
   assert.equal(profile.issueContributions, 1);
+  assert.equal(profile.joinedContributions, 1);
   assert.equal(profile.pullRequestContributions, 3);
   assert.equal(profile.restrictedContributions, 6);
   assert.equal(profile.repositoryContributions, 1);
@@ -137,6 +140,7 @@ test('renderOverview supports the mobile card dimensions', () => {
   assert.match(svg, /MIX \/ 365D/);
   assert.match(svg, /1 REPO/);
   assert.match(svg, /4 PRIVATE/);
+  assert.match(svg, /1 JOIN/);
 });
 
 test('renderDailyActivity describes the rendered daily data', () => {
