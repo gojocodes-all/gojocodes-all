@@ -27,6 +27,10 @@ const PROFILE_QUERY = `
         totalCount
       }
       contributionsCollection {
+        totalCommitContributions
+        totalIssueContributions
+        totalPullRequestContributions
+        totalPullRequestReviewContributions
         contributionCalendar {
           totalContributions
           weeks {
@@ -102,7 +106,8 @@ function calculateStreaks(days) {
 }
 
 function normalizeProfile(user) {
-  const calendar = user.contributionsCollection.contributionCalendar;
+  const contributions = user.contributionsCollection;
+  const calendar = contributions.contributionCalendar;
   const days = flattenDays(calendar);
   const publicRepositories = user.repositories.nodes.filter((repository) => !repository.isPrivate);
   const streaks = calculateStreaks(days);
@@ -110,11 +115,15 @@ function normalizeProfile(user) {
   return {
     activeDays: streaks.activeDays,
     calendar,
+    commitContributions: contributions.totalCommitContributions ?? 0,
     currentStreak: streaks.current,
+    issueContributions: contributions.totalIssueContributions ?? 0,
     longestStreak: streaks.longest,
     profileDate: days.at(-1)?.date ?? new Date().toISOString().slice(0, 10),
     publicRepos: publicRepositories.length,
     pullRequests: user.pullRequests.totalCount,
+    pullRequestContributions: contributions.totalPullRequestContributions ?? 0,
+    reviewContributions: contributions.totalPullRequestReviewContributions ?? 0,
     stars: publicRepositories.reduce((total, repository) => total + repository.stargazerCount, 0),
     totalContributions: calendar.totalContributions,
     username: user.login,
@@ -140,15 +149,16 @@ function svgShell({ width, height, title, description, body }) {
 
 function renderOverview(profile, mobile = false) {
   const updated = escapeXml(profile.profileDate);
+  const mix = `${formatNumber(profile.commitContributions)} COMMITS · ${formatNumber(profile.pullRequestContributions)} PRS · ${formatNumber(profile.issueContributions)} ISSUES · ${formatNumber(profile.reviewContributions)} REVIEWS`;
 
   if (mobile) {
     return svgShell({
       width: 720,
-      height: 520,
+      height: 560,
       title: `${profile.username} GitHub statistics and contribution streak`,
-      description: `Daily profile snapshot with ${profile.totalContributions} contributions in the visible year and a current streak of ${profile.currentStreak} days.`,
+      description: `Current profile snapshot with ${profile.totalContributions} contributions in the visible year and a current streak of ${profile.currentStreak} days.`,
       body: `
-        <text x="40" y="45" fill="${GREEN}" font-family="${MONO}" font-size="15" letter-spacing="1.5">GITHUB / DAILY SNAPSHOT</text>
+        <text x="40" y="45" fill="${GREEN}" font-family="${MONO}" font-size="15" letter-spacing="1.5">GITHUB / LIVE SNAPSHOT</text>
         <text x="680" y="45" fill="${MUTED}" text-anchor="end" font-family="${MONO}" font-size="14">@${escapeXml(profile.username)}</text>
         <line x1="40" y1="68" x2="680" y2="68" stroke="${BORDER}"/>
 
@@ -163,7 +173,9 @@ function renderOverview(profile, mobile = false) {
         ${metric({ label: 'BEST / 365D', value: profile.longestStreak, x: 285, y: 399, valueSize: 42 })}
         ${metric({ label: 'ACTIVE DAYS', value: profile.activeDays, x: 510, y: 399, valueSize: 42 })}
 
-        <text x="40" y="487" fill="${MUTED}" font-family="${MONO}" font-size="12">PUBLIC PROFILE DATA · THROUGH ${updated}</text>`,
+        <line x1="40" y1="468" x2="680" y2="468" stroke="${BORDER}"/>
+        <text x="40" y="502" fill="${TEXT}" font-family="${MONO}" font-size="12">MIX / 365D · ${escapeXml(mix)}</text>
+        <text x="40" y="535" fill="${MUTED}" font-family="${MONO}" font-size="12">30-MIN REFRESH SCHEDULE · DATA THROUGH ${updated}</text>`,
     });
   }
 
@@ -171,9 +183,9 @@ function renderOverview(profile, mobile = false) {
     width: 1200,
     height: 280,
     title: `${profile.username} GitHub statistics and contribution streak`,
-    description: `Daily profile snapshot with ${profile.totalContributions} contributions in the visible year and a current streak of ${profile.currentStreak} days.`,
+    description: `Current profile snapshot with ${profile.totalContributions} contributions in the visible year and a current streak of ${profile.currentStreak} days.`,
     body: `
-      <text x="42" y="42" fill="${GREEN}" font-family="${MONO}" font-size="14" letter-spacing="1.5">GITHUB / DAILY SNAPSHOT</text>
+      <text x="42" y="42" fill="${GREEN}" font-family="${MONO}" font-size="14" letter-spacing="1.5">GITHUB / LIVE SNAPSHOT</text>
       <text x="1158" y="42" fill="${MUTED}" text-anchor="end" font-family="${MONO}" font-size="13">@${escapeXml(profile.username)}</text>
       <line x1="42" y1="63" x2="1158" y2="63" stroke="${BORDER}"/>
 
@@ -188,8 +200,13 @@ function renderOverview(profile, mobile = false) {
       ${metric({ label: 'BEST / 365D', value: profile.longestStreak, x: 930, y: 164, valueSize: 37 })}
       ${metric({ label: 'ACTIVE DAYS', value: profile.activeDays, x: 1060, y: 164, valueSize: 37 })}
 
-      <text x="42" y="250" fill="${MUTED}" font-family="${MONO}" font-size="12">PUBLIC PROFILE DATA · REFRESHED DAILY · THROUGH ${updated}</text>`,
+      <text x="42" y="250" fill="${TEXT}" font-family="${MONO}" font-size="11">MIX / 365D · ${escapeXml(mix)}</text>
+      <text x="1158" y="250" fill="${MUTED}" text-anchor="end" font-family="${MONO}" font-size="11">30-MIN SCHEDULE · THROUGH ${updated}</text>`,
   });
+}
+
+function selectDays(calendar, count) {
+  return flattenDays(calendar).slice(-count);
 }
 
 function selectWeeks(calendar, count) {
@@ -199,10 +216,68 @@ function selectWeeks(calendar, count) {
   }));
 }
 
-function renderActivity(profile, mobile = false) {
+function renderDailyActivity(profile, mobile = false) {
   const width = mobile ? 720 : 1200;
   const height = mobile ? 430 : 340;
-  const weeks = selectWeeks(profile.calendar, mobile ? 16 : 30);
+  const days = selectDays(profile.calendar, 30);
+  const left = mobile ? 54 : 68;
+  const right = mobile ? 680 : 1150;
+  const top = mobile ? 98 : 92;
+  const bottom = mobile ? 342 : 270;
+  const plotWidth = right - left;
+  const plotHeight = bottom - top;
+  const maximum = Math.max(1, ...days.map((day) => day.contributionCount));
+  const slotWidth = plotWidth / Math.max(1, days.length);
+  const barWidth = Math.max(4, slotWidth * (mobile ? 0.62 : 0.68));
+  const total = days.reduce((sum, day) => sum + day.contributionCount, 0);
+  const activeDays = days.filter((day) => day.contributionCount > 0).length;
+  const peak = days.reduce(
+    (best, day) => (day.contributionCount > best.contributionCount ? day : best),
+    days[0] ?? { contributionCount: 0, date: profile.profileDate },
+  );
+
+  const horizontalGrid = Array.from({ length: 4 }, (_, index) => {
+    const ratio = index / 3;
+    const y = top + plotHeight * ratio;
+    const label = Math.round(maximum * (1 - ratio));
+    return `<line x1="${left}" y1="${y.toFixed(1)}" x2="${right}" y2="${y.toFixed(1)}" stroke="${BORDER}" stroke-opacity=".75"/>
+      <text x="${left - 12}" y="${(y + 4).toFixed(1)}" fill="${MUTED}" text-anchor="end" font-family="${MONO}" font-size="11">${label}</text>`;
+  }).join('\n');
+
+  const bars = days.map((day, index) => {
+    const heightValue = day.contributionCount === 0 ? 2 : (plotHeight * day.contributionCount) / maximum;
+    const x = left + slotWidth * index + (slotWidth - barWidth) / 2;
+    const y = bottom - heightValue;
+    const opacity = day.contributionCount === 0 ? 0.22 : 0.72 + (0.28 * day.contributionCount) / maximum;
+    return `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${barWidth.toFixed(1)}" height="${heightValue.toFixed(1)}" rx="2" fill="${GREEN}" fill-opacity="${opacity.toFixed(2)}"/>`;
+  }).join('');
+
+  const labelIndexes = [...new Set([0, Math.floor((days.length - 1) / 3), Math.floor(((days.length - 1) * 2) / 3), days.length - 1])];
+  const dateLabels = labelIndexes.map((index) => {
+    const x = left + slotWidth * index + slotWidth / 2;
+    return `<text x="${x.toFixed(1)}" y="${bottom + 28}" fill="${MUTED}" text-anchor="middle" font-family="${MONO}" font-size="11">${escapeXml(formatDate(days[index].date))}</text>`;
+  }).join('');
+
+  return svgShell({
+    width,
+    height,
+    title: `${profile.username} daily contribution activity`,
+    description: `${total} contributions across the ${days.length} days shown in this graph.`,
+    body: `
+      <text x="${mobile ? 38 : 42}" y="43" fill="${GREEN}" font-family="${MONO}" font-size="14" letter-spacing="1.5">DAILY PULSE / ${days.length} DAYS</text>
+      <text x="${width - (mobile ? 38 : 42)}" y="43" fill="${MUTED}" text-anchor="end" font-family="${MONO}" font-size="13">${formatNumber(total)} IN VIEW</text>
+      <line x1="${mobile ? 38 : 42}" y1="64" x2="${width - (mobile ? 38 : 42)}" y2="64" stroke="${BORDER}"/>
+      ${horizontalGrid}
+      ${bars}
+      ${dateLabels}
+      <text x="${left}" y="${height - 20}" fill="${MUTED}" font-family="${MONO}" font-size="11">ACTIVE ${activeDays}/${days.length} DAYS · PEAK ${formatNumber(peak.contributionCount)} ON ${escapeXml(formatDate(peak.date))}</text>`,
+  });
+}
+
+function renderWeeklyActivity(profile, mobile = false) {
+  const width = mobile ? 720 : 1200;
+  const height = mobile ? 430 : 340;
+  const weeks = selectWeeks(profile.calendar, 30);
   const left = mobile ? 54 : 68;
   const right = mobile ? 680 : 1150;
   const top = mobile ? 98 : 92;
@@ -236,7 +311,7 @@ function renderActivity(profile, mobile = false) {
     title: `${profile.username} weekly contribution activity`,
     description: `${total} contributions across the ${weeks.length} weeks shown in this graph.`,
     body: `
-      <text x="${mobile ? 38 : 42}" y="43" fill="${GREEN}" font-family="${MONO}" font-size="14" letter-spacing="1.5">CONTRIBUTION ACTIVITY / ${weeks.length} WEEKS</text>
+      <text x="${mobile ? 38 : 42}" y="43" fill="${GREEN}" font-family="${MONO}" font-size="14" letter-spacing="1.5">WEEKLY RHYTHM / ${weeks.length} WEEKS</text>
       <text x="${width - (mobile ? 38 : 42)}" y="43" fill="${MUTED}" text-anchor="end" font-family="${MONO}" font-size="13">${formatNumber(total)} IN VIEW</text>
       <line x1="${mobile ? 38 : 42}" y1="64" x2="${width - (mobile ? 38 : 42)}" y2="64" stroke="${BORDER}"/>
       ${horizontalGrid}
@@ -284,10 +359,12 @@ async function main() {
 
   const profile = await fetchProfile(username, token);
   const files = {
-    'profile-activity-mobile.svg': renderActivity(profile, true),
-    'profile-activity.svg': renderActivity(profile),
+    'profile-daily-mobile.svg': renderDailyActivity(profile, true),
+    'profile-daily.svg': renderDailyActivity(profile),
     'profile-overview-mobile.svg': renderOverview(profile, true),
     'profile-overview.svg': renderOverview(profile),
+    'profile-weekly-mobile.svg': renderWeeklyActivity(profile, true),
+    'profile-weekly.svg': renderWeeklyActivity(profile),
   };
 
   await mkdir(OUTPUT_DIR, { recursive: true });
@@ -308,4 +385,10 @@ if (isMain) {
   });
 }
 
-export { calculateStreaks, normalizeProfile, renderActivity, renderOverview };
+export {
+  calculateStreaks,
+  normalizeProfile,
+  renderDailyActivity,
+  renderOverview,
+  renderWeeklyActivity,
+};
