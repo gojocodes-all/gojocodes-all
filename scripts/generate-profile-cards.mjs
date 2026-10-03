@@ -27,6 +27,7 @@ const PROFILE_QUERY = `
         totalCount
       }
       contributionsCollection {
+        restrictedContributionsCount
         totalCommitContributions
         totalIssueContributions
         totalPullRequestContributions
@@ -123,6 +124,7 @@ function normalizeProfile(user) {
     publicRepos: publicRepositories.length,
     pullRequests: user.pullRequests.totalCount,
     pullRequestContributions: contributions.totalPullRequestContributions ?? 0,
+    restrictedContributions: contributions.restrictedContributionsCount ?? 0,
     reviewContributions: contributions.totalPullRequestReviewContributions ?? 0,
     stars: publicRepositories.reduce((total, repository) => total + repository.stargazerCount, 0),
     totalContributions: calendar.totalContributions,
@@ -149,7 +151,10 @@ function svgShell({ width, height, title, description, body }) {
 
 function renderOverview(profile, mobile = false) {
   const updated = escapeXml(profile.profileDate);
-  const mix = `${formatNumber(profile.commitContributions)} COMMITS · ${formatNumber(profile.pullRequestContributions)} PRS · ${formatNumber(profile.issueContributions)} ISSUES · ${formatNumber(profile.reviewContributions)} REVIEWS`;
+  const privateMix = profile.restrictedContributions > 0
+    ? ` · ${formatNumber(profile.restrictedContributions)} PRIVATE`
+    : '';
+  const mix = `${formatNumber(profile.commitContributions)} COMMITS · ${formatNumber(profile.pullRequestContributions)} PRS · ${formatNumber(profile.issueContributions)} ISSUES · ${formatNumber(profile.reviewContributions)} REVIEWS${privateMix}`;
 
   if (mobile) {
     return svgShell({
