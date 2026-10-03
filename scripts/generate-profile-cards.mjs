@@ -32,6 +32,7 @@ const PROFILE_QUERY = `
         totalIssueContributions
         totalPullRequestContributions
         totalPullRequestReviewContributions
+        totalRepositoryContributions
         contributionCalendar {
           totalContributions
           weeks {
@@ -58,6 +59,10 @@ function escapeXml(value) {
 
 function formatNumber(value) {
   return new Intl.NumberFormat('en-GB').format(Number(value) || 0);
+}
+
+function formatCount(value, singular, plural = `${singular}S`) {
+  return `${formatNumber(value)} ${Number(value) === 1 ? singular : plural}`;
 }
 
 function formatDate(date) {
@@ -125,6 +130,7 @@ function normalizeProfile(user) {
     pullRequests: user.pullRequests.totalCount,
     pullRequestContributions: contributions.totalPullRequestContributions ?? 0,
     restrictedContributions: contributions.restrictedContributionsCount ?? 0,
+    repositoryContributions: contributions.totalRepositoryContributions ?? 0,
     reviewContributions: contributions.totalPullRequestReviewContributions ?? 0,
     stars: publicRepositories.reduce((total, repository) => total + repository.stargazerCount, 0),
     totalContributions: calendar.totalContributions,
@@ -154,7 +160,7 @@ function renderOverview(profile, mobile = false) {
   const privateMix = profile.restrictedContributions > 0
     ? ` · ${formatNumber(profile.restrictedContributions)} PRIVATE`
     : '';
-  const mix = `${formatNumber(profile.commitContributions)} COMMITS · ${formatNumber(profile.pullRequestContributions)} PRS · ${formatNumber(profile.issueContributions)} ISSUES · ${formatNumber(profile.reviewContributions)} REVIEWS${privateMix}`;
+  const mix = `${formatCount(profile.commitContributions, 'COMMIT')} · ${formatCount(profile.pullRequestContributions, 'PR')} · ${formatCount(profile.issueContributions, 'ISSUE')} · ${formatCount(profile.reviewContributions, 'REVIEW')} · ${formatCount(profile.repositoryContributions, 'REPO')}${privateMix}`;
 
   if (mobile) {
     return svgShell({
