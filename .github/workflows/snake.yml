@@ -2,7 +2,8 @@ name: Generate profile graphics
 
 on:
   schedule:
-    - cron: "17 0 * * *"
+    # Twice hourly, away from the busiest top-of-hour scheduling window.
+    - cron: "17,47 * * * *"
   workflow_dispatch:
   push:
     branches:
