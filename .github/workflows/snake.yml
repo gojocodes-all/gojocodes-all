@@ -22,10 +22,12 @@ jobs:
 
     steps:
       - name: Check out profile source
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
 
-      - name: Test profile card generator
-        run: node --test test/generate-profile-cards.test.mjs
+      - name: Test profile automation
+        run: node --test test/*.test.mjs
 
       - name: Generate GitHub activity cards
         run: node scripts/generate-profile-cards.mjs
@@ -34,7 +36,7 @@ jobs:
           GITHUB_USERNAME: ${{ github.repository_owner }}
 
       - name: Generate contribution snake
-        uses: Platane/snk/svg-only@v3
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
@@ -42,7 +44,7 @@ jobs:
             dist/contribution-snake-dark.svg?color_snake=%2322ff88&color_dots=%23161b22,%230d4429,%23006d32,%2326a641,%2339d353
 
       - name: Publish to output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+        uses: crazy-max/ghaction-github-pages@c0d7ff0487ee0415efb7f32dab10ea880330b1dd # v3.1.0
         with:
           target_branch: output
           build_dir: dist
