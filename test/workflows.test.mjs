@@ -42,5 +42,8 @@ test('scheduled publishing requests only repository-content write access', async
   const source = await readFile('.github/workflows/snake.yml', 'utf8');
 
   assert.match(source, /^    permissions:\n      contents: write$/m);
-  assert.doesNotMatch(source, /^\s+(actions|checks|deployments|id-token|issues|packages|pull-requests|security-events):\s+write$/m);
+  assert.doesNotMatch(
+    source,
+    /^\s+(actions|checks|deployments|id-token|issues|packages|pull-requests|security-events):\s+write$/m,
+  );
 });
