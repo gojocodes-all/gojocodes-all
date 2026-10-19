@@ -26,11 +26,16 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Test profile automation
-        run: node --test test/*.test.mjs
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+
+      - name: Validate profile automation
+        run: npm run validate
 
       - name: Generate GitHub activity cards
-        run: node scripts/generate-profile-cards.mjs
+        run: npm run generate
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USERNAME: ${{ github.repository_owner }}

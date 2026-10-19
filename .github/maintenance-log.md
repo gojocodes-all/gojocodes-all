@@ -1,5 +1,14 @@
 # Maintenance log
 
+## 2026-10-19 — Define a reproducible profile automation toolchain
+
+- **Rationale:** The generator and tests had no package manifest, shared validation command, documented local workflow, or declared Node.js version. GitHub Actions therefore depended on the runner's changing preinstalled runtime, while contributors had to reconstruct the required commands and could leave generated assets or token files unignored.
+- **Files changed:** `package.json`, `.nvmrc`, `.gitignore`, `CONTRIBUTING.md`, `.github/workflows/profile-tests.yml`, `.github/workflows/snake.yml`, `test/workflows.test.mjs`, and this log.
+- **Changes:** Declare dependency-free generate/check/test/validate scripts; pin local and CI execution to Node.js 24; use the same validation entry point in both workflows; keep the new setup action immutable; ignore generated output, local dependencies, logs, and environment files; and document safe local validation and generation.
+- **Validation:** `npm run validate`; workflow contract tests; `git diff --check`; complete diff review for workflow permissions, action provenance, token handling, profile output, and backward compatibility.
+- **Risk level:** Low. The profile query, calculations, rendered SVG content, schedule, permissions, output branch, and existing action revisions are unchanged. The workflows add a pinned official Node setup step and invoke the same underlying commands through npm scripts.
+- **Rollback:** Revert this pull request to restore runner-provided Node.js and the previous direct shell commands.
+
 ## 2026-10-09 — Pin profile workflow dependencies
 
 - **Rationale:** The profile test and publishing workflows referenced mutable action tags. A tag owner could move those references after review, and checkout retained its injected GitHub credential even though only the final publishing action needs authenticated repository access.

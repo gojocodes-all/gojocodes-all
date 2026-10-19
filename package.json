@@ -1,0 +1,14 @@
+{
+  "name": "gojocodes-all-profile",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "generate": "node scripts/generate-profile-cards.mjs",
+    "check": "node --check scripts/generate-profile-cards.mjs && node --check test/generate-profile-cards.test.mjs && node --check test/workflows.test.mjs",
+    "test": "node --test test/*.test.mjs",
+    "validate": "npm run check && npm test"
+  }
+}
