@@ -337,7 +337,7 @@ function renderWeeklyActivity(profile, mobile = false) {
       <path d="${linePath}" fill="none" stroke="${GREEN}" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"/>
       ${dots}
       ${dateLabels}
-      <text x="${left}" y="${height - 20}" fill="${MUTED}" font-family="${MONO}" font-size="11">WEEKLY PUBLIC CONTRIBUTIONS</text>`,
+      <text x="${left}" y="${height - 20}" fill="${MUTED}" font-family="${MONO}" font-size="11">WEEKLY CONTRIBUTIONS</text>`,
   });
 }
 
