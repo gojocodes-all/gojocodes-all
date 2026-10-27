@@ -157,5 +157,6 @@ test('renderWeeklyActivity describes the rendered weekly data', () => {
   assert.match(svg, /weekly contribution activity/);
   assert.match(svg, /2 contributions across the 1 weeks shown/);
   assert.match(svg, /WEEKLY RHYTHM \/ 1 WEEKS/);
-  assert.match(svg, /WEEKLY PUBLIC CONTRIBUTIONS/);
+  assert.match(svg, /WEEKLY CONTRIBUTIONS/);
+  assert.doesNotMatch(svg, /PUBLIC CONTRIBUTIONS/);
 });

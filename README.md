@@ -149,7 +149,7 @@ The close-up view: individual contribution days across the last month.
 <p align="center">
   <picture>
     <source media="(max-width: 640px)" srcset="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/profile-daily-mobile.svg">
-    <img src="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/profile-daily.svg" width="100%" alt="Daily public contribution activity across the last 30 days for gojocodes-all">
+    <img src="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/profile-daily.svg" width="100%" alt="Daily contribution activity across the last 30 days for gojocodes-all">
   </picture>
 </p>
 
@@ -160,7 +160,7 @@ The wider view: week-by-week momentum across roughly seven months.
 <p align="center">
   <picture>
     <source media="(max-width: 640px)" srcset="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/profile-weekly-mobile.svg">
-    <img src="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/profile-weekly.svg" width="100%" alt="Weekly public contribution activity across the last 30 weeks for gojocodes-all">
+    <img src="https://raw.githubusercontent.com/gojocodes-all/gojocodes-all/output/profile-weekly.svg" width="100%" alt="Weekly contribution activity across the last 30 weeks for gojocodes-all">
   </picture>
 </p>
 

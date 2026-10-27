@@ -1,5 +1,14 @@
 # Maintenance log
 
+## 2026-10-27 — Describe mixed-visibility activity accurately
+
+- **Rationale:** The daily and weekly charts are built from GitHub's contribution calendar, which can include anonymized counts from private repositories when that profile setting is enabled. The README alt text and weekly card footer incorrectly described the complete calendar as public activity even though the overview already reports restricted contributions separately.
+- **Files changed:** `scripts/generate-profile-cards.mjs`, `test/generate-profile-cards.test.mjs`, `README.md`, and this log.
+- **Changes:** Remove the inaccurate `public` qualifier from the generated weekly chart and both README activity descriptions; add a regression assertion that prevents the misleading label from returning.
+- **Validation:** `npm run validate`; generated desktop and mobile SVGs inspected for the corrected label; `git diff --check`; complete diff review for data accuracy, private-detail exposure, accessibility, backward compatibility, and repository conventions.
+- **Risk level:** Low. GraphQL queries, contribution counts, rendering layout, generated filenames, publication behavior, dependencies, and workflow permissions are unchanged. The wording becomes accurate without revealing repository names or other private details.
+- **Rollback:** Revert this pull request to restore the previous labels; no data, configuration, or deployment rollback is required.
+
 ## 2026-10-19 — Define a reproducible profile automation toolchain
 
 - **Rationale:** The generator and tests had no package manifest, shared validation command, documented local workflow, or declared Node.js version. GitHub Actions therefore depended on the runner's changing preinstalled runtime, while contributors had to reconstruct the required commands and could leave generated assets or token files unignored.
