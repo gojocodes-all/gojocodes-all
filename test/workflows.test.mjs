@@ -4,11 +4,11 @@ import test from 'node:test';
 
 const workflows = {
   '.github/workflows/profile-tests.yml': [
-    'actions/checkout@11d5960a326750d5838078e36cf38b85af677262',
+    'actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09',
     'actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1',
   ],
   '.github/workflows/snake.yml': [
-    'actions/checkout@11d5960a326750d5838078e36cf38b85af677262',
+    'actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09',
     'actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1',
     'Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b',
     'crazy-max/ghaction-github-pages@c0d7ff0487ee0415efb7f32dab10ea880330b1dd',
@@ -29,7 +29,7 @@ for (const [path, expectedActions] of Object.entries(workflows)) {
     );
     assert.match(
       source,
-      /uses: actions\/checkout@[0-9a-f]{40} # v4\n\s+with:\n\s+persist-credentials: false/,
+      /uses: actions\/checkout@[0-9a-f]{40} # v5\.1\.0\n\s+with:\n\s+persist-credentials: false/,
     );
   });
 }

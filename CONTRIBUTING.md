@@ -51,6 +51,7 @@ that directory; the publishing workflow deploys it to the `output` branch.
 - Pull requests receive read-only validation.
 - Pushes to `main`, manual dispatches, and the schedule validate before they
   generate and publish profile assets.
-- Workflow actions stay pinned to reviewed commit SHAs.
+- Workflow actions stay pinned to reviewed commit SHAs and use action runtimes
+  supported by GitHub-hosted runners.
 - The checked-in `.nvmrc` is the single Node.js version source for local and CI
   validation.
