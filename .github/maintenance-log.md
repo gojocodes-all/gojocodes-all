@@ -1,5 +1,28 @@
 # Maintenance log
 
+## 2026-11-07 — Move checkout to a supported action runtime
+
+- **Rationale:** Successful profile-generation runs warned that the pinned
+  `actions/checkout` v4.4.0 action still targets deprecated Node.js 20 and only
+  continues because GitHub currently forces it onto Node.js 24. Depending on
+  that compatibility override makes both pull-request validation and scheduled
+  profile publication vulnerable to a future runner enforcement change.
+- **Files changed:** Both workflows now pin the official Node.js 24-based
+  `actions/checkout` v5.1.0 commit; the workflow contract tests lock the new
+  immutable revision and version annotation; `CONTRIBUTING.md` documents the
+  supported-runtime requirement; and this log records the maintenance decision.
+- **Validation:** `npm run validate` (12 tests); `git diff --check`; confirmed
+  the official v5.1.0 release commit and `node24` action runtime; and reviewed
+  the complete diff for workflow permissions, credential persistence, trigger
+  behavior, publishing behavior, security, and backward compatibility. The
+  pull-request workflow is the hosted checkout compatibility gate.
+- **Risk level:** Medium for merge policy because this crosses a GitHub Action
+  major version. Operational risk is otherwise low: the workflows do not use
+  `pull_request_target` or `workflow_run`, checkout inputs and permissions are
+  unchanged, and no generator, profile data, schedule, or output is modified.
+- **Rollback:** Revert this pull request to restore the v4.4.0 checkout pin and
+  its Node.js 20 compatibility warning.
+
 ## 2026-10-27 — Describe mixed-visibility activity accurately
 
 - **Rationale:** The daily and weekly charts are built from GitHub's contribution calendar, which can include anonymized counts from private repositories when that profile setting is enabled. The README alt text and weekly card footer incorrectly described the complete calendar as public activity even though the overview already reports restricted contributions separately.
