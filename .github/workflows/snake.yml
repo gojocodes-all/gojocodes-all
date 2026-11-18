@@ -2,8 +2,7 @@ name: Generate profile graphics
 
 on:
   schedule:
-    # Twice hourly, away from the busiest top-of-hour scheduling window.
-    - cron: "17,47 * * * *"
+    - cron: "17 0 * * *"
   workflow_dispatch:
   push:
     branches:
@@ -22,26 +21,16 @@ jobs:
 
     steps:
       - name: Check out profile source
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-        with:
-          persist-credentials: false
-
-      - name: Set up Node.js
-        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
-        with:
-          node-version-file: .nvmrc
-
-      - name: Validate profile automation
-        run: npm run validate
+        uses: actions/checkout@v4
 
       - name: Generate GitHub activity cards
-        run: npm run generate
+        run: node scripts/generate-profile-cards.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USERNAME: ${{ github.repository_owner }}
 
       - name: Generate contribution snake
-        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
@@ -49,7 +38,7 @@ jobs:
             dist/contribution-snake-dark.svg?color_snake=%2322ff88&color_dots=%23161b22,%230d4429,%23006d32,%2326a641,%2339d353
 
       - name: Publish to output branch
-        uses: crazy-max/ghaction-github-pages@c0d7ff0487ee0415efb7f32dab10ea880330b1dd # v3.1.0
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
           build_dir: dist
